@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clutch Bags Kenya — Statement Clutch Bags & Handbags in Nairobi</title>
+<meta name="description" content="Shop statement clutch bags, handbags and occasion pieces curated in Nairobi. Free same-day CBD delivery, countrywide shipping and M-Pesa accepted.">
+<meta name="theme-color" content="#0b3d2a">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link id="css-store" rel="stylesheet" href="css/store.css">
+<link id="css-admin" rel="stylesheet" href="css/admin.css">
+<script>
+/* One page, two modes: the shop (default) and the admin panel (index.html#/admin). */
+var CBK_ADMIN = /^#\/admin/.test(location.hash);
+document.getElementById(CBK_ADMIN ? 'css-store' : 'css-admin').remove();
+window.addEventListener('hashchange', function () { if (/^#\/admin/.test(location.hash) !== CBK_ADMIN) location.reload(); });
+</script>
+</head>
+<body>
+<div id="app"><div class="boot">Loading…</div></div>
+<div id="root"></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script>
+(function () {
+  if (CBK_ADMIN) { document.getElementById('app').remove(); document.title = 'Admin — Clutch Bags Kenya'; }
+  else document.getElementById('root').remove();
+  ['js/icons.js', 'js/data.js', 'js/backend.js', CBK_ADMIN ? 'js/admin.js' : 'js/store.js'].forEach(function (src) {
+    var s = document.createElement('script'); s.src = src; s.async = false; document.body.appendChild(s);
+  });
+})();
+</script>
+<noscript>Please enable JavaScript to use Clutch Bags Kenya.</noscript>
+</body>
+</html>
